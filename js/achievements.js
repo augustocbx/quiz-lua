@@ -7,92 +7,92 @@ class AchievementSystem {
             // MUITO FÁCIL - Garantidos no primeiro quiz
             {
                 id: 'first_star',
-                name: 'Primeira Estrela',
+                name: 'Primeira Lua',
                 description: 'Complete seu primeiro quiz',
-                icon: '🌟',
+                icon: '🌙',
                 condition: (stats) => stats.quizzesCompleted >= 1
             },
             {
                 id: 'beginner',
-                name: 'Primeiros Passos',
+                name: 'Explorador Lunar',
                 description: 'Acerte 5 ou mais perguntas',
-                icon: '🎈',
+                icon: '🚀',
                 condition: (stats) => stats.currentScore >= 5
             },
             {
                 id: 'power_master',
-                name: 'Mestre das Ajudas',
+                name: 'Astronauta Esperto',
                 description: 'Use todos os 3 power-ups em um único quiz',
-                icon: '🎪',
+                icon: '👨‍🚀',
                 condition: (stats) => stats.quizCompleted && stats.allPowerUpsUsed === true
             },
 
             // FÁCIL - Acontecem naturalmente
             {
                 id: 'explorer',
-                name: 'Explorador',
+                name: 'Observador Lunar',
                 description: 'Acerte 7 ou mais perguntas',
-                icon: '⭐',
+                icon: '🔭',
                 condition: (stats) => stats.currentScore >= 7
             },
             {
                 id: 'combo_master',
-                name: 'Combo Master',
+                name: 'Fase Cheia',
                 description: 'Acerte 5 perguntas seguidas',
-                icon: '🔥',
+                icon: '🌕',
                 condition: (stats) => stats.maxCombo >= 5
             },
 
             // MÉDIO - Requer atenção e conhecimento
             {
                 id: 'navigator',
-                name: 'Navegador Expert',
+                name: 'Mestre Lunar',
                 description: 'Acerte 9 ou mais perguntas',
                 icon: '🎯',
                 condition: (stats) => stats.currentScore >= 9
             },
             {
                 id: 'medium_master',
-                name: 'Domínio das Médias',
+                name: 'Cientista Lunar',
                 description: 'Acerte todas as 3 perguntas médias',
-                icon: '📚',
+                icon: '🔬',
                 condition: (stats) => stats.mediumCorrect === 3
             },
             {
                 id: 'strategist',
-                name: 'Estrategista',
+                name: 'Astronauta Confiante',
                 description: 'Complete um quiz sem usar nenhum power-up',
-                icon: '🎮',
+                icon: '💪',
                 condition: (stats) => stats.quizCompleted && stats.powerUpsUsed === 0
             },
             {
                 id: 'resilient',
-                name: 'Resiliente',
+                name: 'Persistente',
                 description: 'Erre 3 ou mais perguntas mas complete com 7+ acertos',
-                icon: '🌊',
+                icon: '⭐',
                 condition: (stats) => stats.currentScore >= 7 && (10 - stats.currentScore) >= 3 && stats.quizCompleted
             },
             {
                 id: 'hard_conqueror',
-                name: 'Desafio Difícil',
+                name: 'Conhecedor Avançado',
                 description: 'Acerte a pergunta difícil',
-                icon: '💪',
+                icon: '🎯',
                 condition: (stats) => stats.hardCorrect === true
             },
 
             // MÉDIO-DIFÍCIL - Requer domínio ou sorte
             {
                 id: 'compass_expert',
-                name: 'Mestre da Bússola',
-                description: 'Acerte todas as perguntas sobre bússola (mínimo 2)',
-                icon: '🧭',
+                name: 'Expert em Fases',
+                description: 'Acerte todas as perguntas sobre fases da Lua (mínimo 2)',
+                icon: '🌗',
                 condition: (stats) => stats.compassCorrect >= 2 && stats.compassTotal === stats.compassCorrect && stats.compassTotal >= 2
             },
             {
                 id: 'gps_guru',
-                name: 'Guru do GPS',
-                description: 'Acerte todas as perguntas sobre GPS (mínimo 2)',
-                icon: '🛰️',
+                name: 'Mestre Apollo',
+                description: 'Acerte todas as perguntas sobre missões Apollo (mínimo 2)',
+                icon: '🚀',
                 condition: (stats) => stats.gpsCorrect >= 2 && stats.gpsTotal === stats.gpsCorrect && stats.gpsTotal >= 2
             },
             {

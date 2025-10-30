@@ -1,87 +1,125 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <!-- Fundo gradiente com as novas cores -->
+  <!-- Fundo do espaço -->
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1A1110;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#3E2723;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#5D4037;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="calendarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
-    </linearGradient>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f1824;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="moonGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a8a8a8;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="earthGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#7cb5ec;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#3182ce;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c5aa0;stop-opacity:1" />
+    </radialGradient>
   </defs>
 
-  <!-- Fundo -->
-  <rect width="512" height="512" fill="url(#bgGrad)" rx="100"/>
+  <!-- Fundo do espaço -->
+  <rect width="512" height="512" fill="url(#spaceBg)" rx="100"/>
 
-  <!-- Círculo decorativo de fundo -->
-  <circle cx="256" cy="256" r="220" fill="#8B4513" opacity="0.3"/>
+  <!-- Estrelas pequenas -->
+  <circle cx="80" cy="100" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="420" cy="90" r="2.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="100" cy="400" r="2" fill="#ffffff" opacity="0.7"/>
+  <circle cx="450" cy="350" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="60" cy="250" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="430" cy="200" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="150" cy="80" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="380" cy="430" r="2.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="90" cy="320" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="460" cy="150" r="1.5" fill="#ffffff" opacity="0.7"/>
 
-  <!-- Calendário principal -->
-  <rect x="120" y="140" width="272" height="280" rx="20" fill="url(#calendarGrad)" stroke="#8B4513" stroke-width="6"/>
+  <!-- Estrelas médias com brilho -->
+  <g opacity="0.9">
+    <circle cx="120" cy="150" r="3" fill="#ffd700"/>
+    <circle cx="120" cy="150" r="2" fill="#ffffff"/>
+  </g>
+  <g opacity="0.85">
+    <circle cx="400" cy="280" r="3" fill="#ffd700"/>
+    <circle cx="400" cy="280" r="2" fill="#ffffff"/>
+  </g>
+  <g opacity="0.9">
+    <circle cx="180" cy="420" r="3" fill="#ffd700"/>
+    <circle cx="180" cy="420" r="2" fill="#ffffff"/>
+  </g>
 
-  <!-- Topo do calendário (argola) -->
-  <rect x="120" y="120" width="272" height="40" rx="10" fill="#8B4513"/>
+  <!-- Terra ao fundo (canto inferior esquerdo) -->
+  <circle cx="100" cy="420" r="70" fill="url(#earthGrad)" opacity="0.7"/>
+  <!-- Continentes na Terra -->
+  <ellipse cx="90" cy="410" rx="25" ry="15" fill="#2d5016" opacity="0.6"/>
+  <ellipse cx="115" cy="430" rx="20" ry="12" fill="#2d5016" opacity="0.6"/>
+  <!-- Nuvens na Terra -->
+  <ellipse cx="95" cy="395" rx="15" ry="8" fill="#ffffff" opacity="0.4"/>
+  <ellipse cx="120" cy="415" rx="18" ry="10" fill="#ffffff" opacity="0.3"/>
 
-  <!-- Argolas de suspensão -->
-  <circle cx="180" cy="130" r="12" fill="none" stroke="#FFD700" stroke-width="6"/>
-  <circle cx="256" cy="130" r="12" fill="none" stroke="#FFD700" stroke-width="6"/>
-  <circle cx="332" cy="130" r="12" fill="none" stroke="#FFD700" stroke-width="6"/>
+  <!-- Lua principal (centro, grande e destacada) -->
+  <circle cx="280" cy="240" r="140" fill="url(#moonGrad)"/>
 
-  <!-- Grade de dias do calendário -->
-  <!-- Semana 1 -->
-  <rect x="140" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="180" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="220" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="260" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="300" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="340" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <!-- Crateras lunares (várias de tamanhos diferentes) -->
+  <!-- Crateras grandes -->
+  <circle cx="240" cy="200" r="25" fill="#999999" opacity="0.5"/>
+  <circle cx="240" cy="200" r="20" fill="#b0b0b0" opacity="0.4"/>
 
-  <!-- Semana 2 -->
-  <rect x="140" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="180" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="220" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="260" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="300" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="340" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <circle cx="330" cy="260" r="30" fill="#999999" opacity="0.5"/>
+  <circle cx="330" cy="260" r="24" fill="#b0b0b0" opacity="0.4"/>
 
-  <!-- Semana 3 -->
-  <rect x="140" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="180" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="220" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="260" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="300" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="340" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <circle cx="300" cy="320" r="20" fill="#999999" opacity="0.5"/>
+  <circle cx="300" cy="320" r="16" fill="#b0b0b0" opacity="0.4"/>
 
-  <!-- Semana 4 -->
-  <rect x="140" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="180" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="220" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="260" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="300" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
-  <rect x="340" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <!-- Crateras médias -->
+  <circle cx="350" cy="190" r="15" fill="#999999" opacity="0.4"/>
+  <circle cx="350" cy="190" r="12" fill="#b0b0b0" opacity="0.3"/>
 
-  <!-- Dia destacado (15) -->
-  <rect x="220" y="245" width="35" height="35" rx="5" fill="#FFD700"/>
-  <text x="237.5" y="270" text-anchor="middle" fill="#8B4513" font-size="20" font-weight="bold" font-family="Arial">15</text>
+  <circle cx="210" cy="270" r="12" fill="#999999" opacity="0.4"/>
+  <circle cx="210" cy="270" r="9" fill="#b0b0b0" opacity="0.3"/>
 
-  <!-- Sol (calendário solar) no canto superior direito -->
-  <circle cx="430" cy="90" r="40" fill="#FFD700" opacity="0.8"/>
-  <circle cx="430" cy="90" r="32" fill="#FFA500"/>
-  <!-- Raios do sol -->
-  <line x1="430" y1="40" x2="430" y2="25" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
-  <line x1="460" y1="60" x2="472" y2="48" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
-  <line x1="480" y1="90" x2="495" y2="90" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
-  <line x1="460" y1="120" x2="472" y2="132" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="280" cy="180" r="10" fill="#999999" opacity="0.4"/>
+  <circle cx="280" cy="180" r="7" fill="#b0b0b0" opacity="0.3"/>
 
-  <!-- Lua (calendário lunar) no canto inferior esquerdo -->
-  <circle cx="82" cy="430" r="40" fill="#E8E8E8" opacity="0.9"/>
-  <circle cx="95" cy="430" r="35" fill="#8B4513" opacity="0.3"/>
+  <circle cx="360" cy="310" r="13" fill="#999999" opacity="0.4"/>
+  <circle cx="360" cy="310" r="10" fill="#b0b0b0" opacity="0.3"/>
 
-  <!-- Estrelas decorativas (representando os 12 calendários) -->
-  <circle cx="100" cy="120" r="4" fill="#FFD700" opacity="0.7"/>
-  <circle cx="410" cy="180" r="4" fill="#FFD700" opacity="0.7"/>
-  <circle cx="90" cy="320" r="4" fill="#FFD700" opacity="0.7"/>
-  <circle cx="420" cy="390" r="4" fill="#FFD700" opacity="0.7"/>
+  <!-- Crateras pequenas -->
+  <circle cx="250" cy="240" r="7" fill="#999999" opacity="0.3"/>
+  <circle cx="320" cy="210" r="6" fill="#999999" opacity="0.3"/>
+  <circle cx="270" cy="300" r="8" fill="#999999" opacity="0.3"/>
+  <circle cx="340" cy="240" r="5" fill="#999999" opacity="0.3"/>
+  <circle cx="230" cy="310" r="6" fill="#999999" opacity="0.3"/>
+  <circle cx="310" cy="280" r="7" fill="#999999" opacity="0.3"/>
+
+  <!-- Mares lunares (áreas mais escuras) -->
+  <ellipse cx="290" cy="250" rx="45" ry="40" fill="#808080" opacity="0.25"/>
+  <ellipse cx="240" cy="290" rx="30" ry="35" fill="#808080" opacity="0.2"/>
+  <ellipse cx="340" cy="220" rx="35" ry="30" fill="#808080" opacity="0.2"/>
+
+  <!-- Brilho sutil na Lua (luz do Sol) -->
+  <ellipse cx="260" cy="210" rx="50" ry="55" fill="#ffffff" opacity="0.15"/>
+
+  <!-- Pegada de astronauta na Lua -->
+  <g transform="translate(305, 265)">
+    <ellipse cx="0" cy="0" rx="8" ry="12" fill="#888888" opacity="0.6"/>
+    <rect x="-6" y="-8" width="2" height="14" fill="#888888" opacity="0.5"/>
+    <rect x="-2" y="-8" width="2" height="14" fill="#888888" opacity="0.5"/>
+    <rect x="2" y="-8" width="2" height="14" fill="#888888" opacity="0.5"/>
+  </g>
+
+  <!-- Bandeira na Lua (representando missões Apollo) -->
+  <g transform="translate(220, 340)">
+    <line x1="0" y1="0" x2="0" y2="30" stroke="#cccccc" stroke-width="2"/>
+    <path d="M 0,0 L 20,5 L 0,10 Z" fill="#e63946" opacity="0.8"/>
+  </g>
+
+  <!-- Texto "QUIZ" em círculo decorativo no topo -->
+  <circle cx="256" cy="80" r="50" fill="#1e3a5f" opacity="0.8" stroke="#4a90e2" stroke-width="3"/>
+  <text x="256" y="92" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold" font-family="Arial, sans-serif">QUIZ</text>
+
+  <!-- Brilho ao redor do círculo QUIZ -->
+  <circle cx="256" cy="80" r="52" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.4"/>
 </svg>

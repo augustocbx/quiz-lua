@@ -3,24 +3,24 @@
 class AvatarSystem {
     constructor() {
         this.avatars = [
-            { id: 'calendar', emoji: '📅', name: 'Calendário' },
-            { id: 'clock', emoji: '🕐', name: 'Relógio' },
-            { id: 'hourglass', emoji: '⌛', name: 'Ampulheta' },
-            { id: 'sun', emoji: '☀️', name: 'Sol' },
-            { id: 'moon', emoji: '🌙', name: 'Lua' },
-            { id: 'dragon', emoji: '🐉', name: 'Dragão Chinês' },
-            { id: 'mosque', emoji: '🕌', name: 'Mesquita' },
-            { id: 'pyramid', emoji: '🏜️', name: 'Pirâmide' },
-            { id: 'mayan', emoji: '🗿', name: 'Moai Maia' },
-            { id: 'star-david', emoji: '✡️', name: 'Estrela de Davi' },
-            { id: 'globe', emoji: '🌍', name: 'Globo' },
+            { id: 'full-moon', emoji: '🌕', name: 'Lua Cheia' },
+            { id: 'new-moon', emoji: '🌑', name: 'Lua Nova' },
+            { id: 'crescent', emoji: '🌙', name: 'Lua Crescente' },
+            { id: 'first-quarter', emoji: '🌓', name: 'Quarto Crescente' },
+            { id: 'last-quarter', emoji: '🌗', name: 'Quarto Minguante' },
+            { id: 'astronaut', emoji: '👨‍🚀', name: 'Astronauta' },
+            { id: 'rocket', emoji: '🚀', name: 'Foguete' },
+            { id: 'telescope', emoji: '🔭', name: 'Telescópio' },
+            { id: 'satellite', emoji: '🛰️', name: 'Satélite' },
             { id: 'earth', emoji: '🌎', name: 'Terra' },
-            { id: 'time', emoji: '⏰', name: 'Despertador' },
-            { id: 'sundial', emoji: '🌅', name: 'Relógio Solar' },
-            { id: 'phases', emoji: '🌗', name: 'Fases Lunares' },
-            { id: 'world', emoji: '🗺️', name: 'Mapa Mundi' },
-            { id: 'watch', emoji: '⌚', name: 'Relógio de Pulso' },
-            { id: 'timer', emoji: '⏱️', name: 'Cronômetro' }
+            { id: 'stars', emoji: '✨', name: 'Estrelas' },
+            { id: 'planet', emoji: '🪐', name: 'Planeta' },
+            { id: 'comet', emoji: '☄️', name: 'Cometa' },
+            { id: 'galaxy', emoji: '🌌', name: 'Galáxia' },
+            { id: 'alien', emoji: '👽', name: 'Alienígena' },
+            { id: 'ufo', emoji: '🛸', name: 'OVNI' },
+            { id: 'meteor', emoji: '💫', name: 'Meteoro' },
+            { id: 'space', emoji: '🌠', name: 'Estrela Cadente' }
         ];
 
         this.selectedAvatar = this.loadSavedAvatar() || this.avatars[0];

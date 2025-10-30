@@ -1,115 +1,137 @@
-// Sistema de nomes aleatórios com ícones temáticos
+// Sistema de nomes aleatórios com ícones temáticos sobre a Lua
 const RANDOM_NAMES = [
-    // Calendários do mundo
-    { name: "Guardião do Gregoriano", icon: "📅" },
-    { name: "Mestre do Juliano", icon: "⏳" },
-    { name: "Sábio Chinês", icon: "🐉" },
-    { name: "Guardião Islâmico", icon: "☪️" },
-    { name: "Escriba Maia", icon: "📜" },
-    { name: "Protetor Etíope", icon: "🦁" },
-    { name: "Rabino do Tempo", icon: "✡️" },
-    { name: "Guardião Juche", icon: "🏛️" },
-    { name: "Faraó do Nilo", icon: "🏜️" },
+    // Fases da Lua
+    { name: "Guardião da Lua Cheia", icon: "🌕" },
+    { name: "Mestre da Lua Nova", icon: "🌑" },
+    { name: "Protetor Crescente", icon: "🌒" },
+    { name: "Sábio Minguante", icon: "🌘" },
+    { name: "Observador das Fases", icon: "🌓" },
+    { name: "Guardião do Quarto Crescente", icon: "🌔" },
 
-    // Tipos de calendários
-    { name: "Mestre Solar", icon: "☀️" },
-    { name: "Guardião Lunar", icon: "🌙" },
-    { name: "Sábio Lunissolar", icon: "🌗" },
+    // Astronomia Lunar
+    { name: "Astrônomo Lunar", icon: "🔭" },
+    { name: "Observador do Satélite", icon: "🛰️" },
+    { name: "Mestre da Órbita", icon: "🌍" },
+    { name: "Protetor do Sistema Terra-Lua", icon: "🌎" },
+    { name: "Sábio dos Eclipses", icon: "🌘" },
 
-    // Elementos astronômicos
-    { name: "Observador do Sol", icon: "🌞" },
-    { name: "Guardião da Lua Nova", icon: "🌑" },
-    { name: "Mestre da Lua Cheia", icon: "🌕" },
-    { name: "Protetor do Crescente", icon: "🌙" },
-    { name: "Sábio das Fases", icon: "🌘" },
+    // Missões Apollo
+    { name: "Astronauta Apollo", icon: "👨‍🚀" },
+    { name: "Comandante Armstrong", icon: "🚀" },
+    { name: "Piloto Lunar", icon: "🛸" },
+    { name: "Explorador Espacial", icon: "🌌" },
+    { name: "Mestre das Missões", icon: "🚀" },
+    { name: "Guardião do Eagle", icon: "🦅" },
 
-    // Conceitos de tempo
-    { name: "Guardião do Tempo", icon: "⏰" },
-    { name: "Mestre dos Ciclos", icon: "🔄" },
-    { name: "Protetor dos Anos", icon: "📆" },
-    { name: "Sábio dos Meses", icon: "📅" },
-    { name: "Guardião dos Dias", icon: "🗓️" },
-    { name: "Mestre das Horas", icon: "⌚" },
+    // Superfície Lunar
+    { name: "Guardião das Crateras", icon: "🕳️" },
+    { name: "Mestre dos Mares Lunares", icon: "🌊" },
+    { name: "Protetor do Regolito", icon: "🏜️" },
+    { name: "Sábio de Tycho", icon: "⭕" },
+    { name: "Guardião da Tranquilidade", icon: "🌙" },
 
-    // Culturas e tradições
-    { name: "Cronista Romano", icon: "🏛️" },
-    { name: "Escriba do Vaticano", icon: "⛪" },
-    { name: "Astrônomo Chinês", icon: "🔭" },
-    { name: "Sábio de Meca", icon: "🕌" },
-    { name: "Sacerdote Maia", icon: "🗿" },
-    { name: "Monge Etíope", icon: "⛪" },
-    { name: "Rabino de Jerusalém", icon: "🕍" },
-    { name: "Líder de Pyongyang", icon: "🏙️" },
-    { name: "Sacerdote do Nilo", icon: "🏺" },
+    // Influência da Lua
+    { name: "Mestre das Marés", icon: "🌊" },
+    { name: "Guardião Gravitacional", icon: "⚖️" },
+    { name: "Protetor dos Oceanos", icon: "🌊" },
+    { name: "Sábio da Gravidade", icon: "🪐" },
 
-    // Símbolos matemáticos e científicos
-    { name: "Calculador de Épocas", icon: "🔢" },
-    { name: "Mestre dos Bissextos", icon: "➕" },
-    { name: "Guardião dos 365 Dias", icon: "3️⃣6️⃣5️⃣" },
-    { name: "Protetor dos 354 Dias", icon: "🌙" },
-    { name: "Sábio dos 13 Meses", icon: "1️⃣3️⃣" },
+    // Eclipses
+    { name: "Observador de Eclipses", icon: "🌑" },
+    { name: "Mestre do Eclipse Lunar", icon: "🌚" },
+    { name: "Guardião da Lua de Sangue", icon: "🔴" },
+    { name: "Protetor da Sombra", icon: "🌘" },
 
-    // Festividades
-    { name: "Mestre do Ano Novo", icon: "🎊" },
-    { name: "Guardião das Festas", icon: "🎉" },
-    { name: "Protetor das Tradições", icon: "🎭" },
-    { name: "Sábio dos Feriados", icon: "🎈" },
+    // Características Físicas
+    { name: "Sábio da Gravidade Fraca", icon: "🪶" },
+    { name: "Mestre dos 384.400 km", icon: "📏" },
+    { name: "Guardião do Satélite Natural", icon: "🌙" },
+    { name: "Protetor do Lado Oculto", icon: "🌚" },
 
-    // Histórico
-    { name: "Cronista Antigo", icon: "📖" },
-    { name: "Guardião da História", icon: "📚" },
-    { name: "Mestre do Passado", icon: "⏮️" },
-    { name: "Protetor do Futuro", icon: "⏭️" },
-    { name: "Sábio do Presente", icon: "▶️" },
+    // Exploração Moderna
+    { name: "Pioneiro Artemis", icon: "🚀" },
+    { name: "Mestre da Exploração", icon: "🛰️" },
+    { name: "Guardião Chang'e", icon: "🐰" },
+    { name: "Protetor Chandrayaan", icon: "🇮🇳" },
 
-    // Natureza e astronomia
-    { name: "Observador das Estrelas", icon: "⭐" },
-    { name: "Guardião do Equinócio", icon: "⚖️" },
-    { name: "Mestre do Solstício", icon: "🌅" },
-    { name: "Protetor das Estações", icon: "🍂" },
-    { name: "Sábio da Primavera", icon: "🌸" },
-    { name: "Guardião do Verão", icon: "☀️" },
-    { name: "Mestre do Outono", icon: "🍁" },
-    { name: "Protetor do Inverno", icon: "❄️" },
+    // Mitologia Lunar
+    { name: "Selene da Grécia", icon: "🏛️" },
+    { name: "Luna de Roma", icon: "🏛️" },
+    { name: "Guardião Mitológico", icon: "⚡" },
+    { name: "Mestre das Lendas", icon: "📚" },
+    { name: "Protetor do Coelho Lunar", icon: "🐰" },
 
-    // Instrumentos e símbolos
-    { name: "Mestre do Relógio", icon: "🕰️" },
-    { name: "Guardião da Ampulheta", icon: "⌛" },
-    { name: "Protetor do Astrolábio", icon: "🧭" },
-    { name: "Sábio do Cronômetro", icon: "⏱️" },
+    // Ciência Lunar
+    { name: "Cientista Lunar", icon: "🔬" },
+    { name: "Geólogo Espacial", icon: "🪨" },
+    { name: "Mestre da Formação", icon: "💥" },
+    { name: "Guardião de Theia", icon: "☄️" },
 
-    // Conceitos gerais
-    { name: "Organizador de Rotinas", icon: "📋" },
-    { name: "Planejador Universal", icon: "🗂️" },
-    { name: "Guardião da Ordem", icon: "📊" },
-    { name: "Mestre da Pontualidade", icon: "⏰" },
-    { name: "Protetor da Precisão", icon: "🎯" },
+    // Tempo e Ciclos
+    { name: "Guardião dos 29,5 Dias", icon: "📅" },
+    { name: "Mestre do Ciclo Lunar", icon: "🔄" },
+    { name: "Protetor Sinódico", icon: "⏰" },
+    { name: "Sábio dos 27,3 Dias", icon: "🗓️" },
 
-    // Mitologia e lendas
-    { name: "Filho do Tempo", icon: "👤" },
-    { name: "Guardião Eterno", icon: "♾️" },
-    { name: "Mestre Imortal", icon: "👑" },
-    { name: "Protetor Ancestral", icon: "🗿" },
-    { name: "Sábio Milenar", icon: "🧙" },
+    // Observação
+    { name: "Observador Noturno", icon: "🌃" },
+    { name: "Guardião do Telescópio", icon: "🔭" },
+    { name: "Mestre da Observação", icon: "👁️" },
+    { name: "Protetor dos Astrônomos", icon: "🔭" },
 
-    // Específicos por calendário
-    { name: "Papa Gregório XIII", icon: "⛪" },
-    { name: "Júlio César", icon: "🏛️" },
-    { name: "Imperador Amarelo", icon: "🐉" },
-    { name: "Profeta do Deserto", icon: "🏜️" }
+    // Elementos Visuais
+    { name: "Guardião do Brilho Lunar", icon: "✨" },
+    { name: "Mestre da Reflexão", icon: "💫" },
+    { name: "Protetor do Luar", icon: "🌙" },
+    { name: "Sábio da Luz Refletida", icon: "💡" },
+
+    // Curiosidades
+    { name: "Mestre dos 12 Astronautas", icon: "👥" },
+    { name: "Guardião de 1969", icon: "🗓️" },
+    { name: "Protetor da Pegada", icon: "👣" },
+    { name: "Sábio da Bandeira", icon: "🏴" },
+
+    // Temperaturas e Condições
+    { name: "Guardião dos 127°C", icon: "🌡️" },
+    { name: "Mestre do Vácuo", icon: "🌌" },
+    { name: "Protetor Extremo", icon: "❄️🔥" },
+    { name: "Sábio da Ausência de Ar", icon: "🌫️" },
+
+    // Mais Exploração
+    { name: "Viajante Espacial", icon: "🚀" },
+    { name: "Pioneiro Lunar", icon: "🌙" },
+    { name: "Guardião do LEM", icon: "🛸" },
+    { name: "Mestre do Módulo", icon: "📦" },
+
+    // Crateras Famosas
+    { name: "Guardião de Copérnico", icon: "⭕" },
+    { name: "Mestre de Mare Imbrium", icon: "🌊" },
+    { name: "Protetor de Aristarchus", icon: "✨" },
+    { name: "Sábio de Kepler", icon: "🔭" },
+
+    // Descobertas
+    { name: "Descobridor de Água Lunar", icon: "💧" },
+    { name: "Guardião do Gelo Polar", icon: "🧊" },
+    { name: "Mestre das Descobertas", icon: "🔍" },
+    { name: "Protetor dos Segredos", icon: "🗝️" },
+
+    // Comparações
+    { name: "Mestre do 1/6 da Gravidade", icon: "⚖️" },
+    { name: "Guardião do 1/4 do Tamanho", icon: "📐" },
+    { name: "Protetor das Comparações", icon: "📊" },
+    { name: "Sábio da Proporção", icon: "📏" },
+
+    // Movimentos
+    { name: "Guardião da Rotação Sincronizada", icon: "🔄" },
+    { name: "Mestre do Afastamento", icon: "↔️" },
+    { name: "Protetor dos 3,8 cm/ano", icon: "📏" },
+    { name: "Sábio do Movimento", icon: "🌀" },
+
+    // Nomes Inspiradores
+    { name: "Sonhador Lunar", icon: "💭" },
+    { name: "Visionário Espacial", icon: "👁️" },
+    { name: "Guardião dos Sonhos", icon: "✨" },
+    { name: "Mestre da Inspiração", icon: "🌟" },
+    { name: "Protetor da Curiosidade", icon: "❓" },
+    { name: "Sábio do Conhecimento", icon: "📚" }
 ];
-
-// Função para gerar um nome aleatório
-function getRandomName() {
-    return RANDOM_NAMES[Math.floor(Math.random() * RANDOM_NAMES.length)];
-}
-
-// Função para obter ícone baseado no nome
-function getIconForName(name) {
-    const found = RANDOM_NAMES.find(item => item.name === name);
-    if (found) return found.icon;
-
-    // Se não encontrou, retorna um ícone padrão baseado na primeira letra
-    const firstChar = name.charAt(0).toUpperCase();
-    return firstChar;
-}

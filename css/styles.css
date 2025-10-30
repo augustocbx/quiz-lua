@@ -6,19 +6,19 @@
 }
 
 :root {
-    --primary-color: #8B4513;
-    --secondary-color: #CD853F;
-    --accent-color: #FFD700;
+    --primary-color: #1e3a5f;
+    --secondary-color: #4a90e2;
+    --accent-color: #c0c0c0;
     --success-color: #10b981;
     --danger-color: #ef4444;
-    --dark-bg: #1A1110;
+    --dark-bg: #0a0e27;
     --light-text: #f1f5f9;
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1A1110 0%, #3E2723 50%, #5D4037 100%);
+    background: linear-gradient(135deg, #0a0e27 0%, #1a2332 50%, #2c3e50 100%);
     color: var(--light-text);
     min-height: 100vh;
     overflow-x: hidden;
@@ -70,12 +70,12 @@ body::before {
 .container {
     max-width: 800px;
     width: 100%;
-    background: rgba(26, 17, 16, 0.9);
+    background: rgba(10, 14, 39, 0.9);
     border-radius: 20px;
     padding: 40px;
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(205, 133, 63, 0.3);
+    border: 2px solid rgba(74, 144, 226, 0.3);
 }
 
 /* Títulos */

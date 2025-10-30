@@ -1,14 +1,14 @@
 {
-  "name": "Quiz: Calendários do Mundo",
-  "short_name": "Quiz Calendários",
-  "version": "3.0.0",
-  "description": "Quiz educativo sobre os 12 tipos de calendários mais famosos do mundo",
-  "start_url": "/quiz-cal-chines/",
+  "name": "Quiz: Tudo sobre a Lua",
+  "short_name": "Quiz Lua",
+  "version": "4.0.0",
+  "description": "Quiz educativo sobre a Lua - nosso satélite natural. Aprenda sobre fases, eclipses, missões Apollo, características físicas e muito mais!",
+  "start_url": "/quiz-lua/",
   "display": "standalone",
-  "background_color": "#1A1110",
-  "theme_color": "#8B4513",
+  "background_color": "#0a0e27",
+  "theme_color": "#1e3a5f",
   "orientation": "any",
-  "scope": "/quiz-cal-chines/",
+  "scope": "/quiz-lua/",
   "icons": [
     {
       "src": "images/icon.svg",
