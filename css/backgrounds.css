@@ -4,12 +4,13 @@
 [class*="bg-"] {
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 /* Imagem de fundo para todas as categorias */
 [class*="bg-"]::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -17,18 +18,19 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: brightness(1.2) contrast(1.1);
     z-index: -2;
 }
 
-/* Overlay escuro para melhorar legibilidade */
+/* Overlay suave para melhorar legibilidade sem escurecer muito */
 [class*="bg-"]::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 100%);
     pointer-events: none;
     z-index: -1;
 }
@@ -111,7 +113,7 @@
     background-color: #000428;
 }
 
-/* Estrelas de fundo para todas as categorias */
+/* Estrelas de fundo para todas as categorias - efeito sutil */
 .bg-physical::before,
 .bg-phases::before,
 .bg-formation::before,
@@ -125,11 +127,11 @@
 .bg-mythology::before,
 .bg-astronomy::before {
     background-image:
-        radial-gradient(2px 2px at 10% 20%, white, transparent),
-        radial-gradient(2px 2px at 80% 30%, white, transparent),
-        radial-gradient(1px 1px at 30% 60%, white, transparent),
-        radial-gradient(1px 1px at 90% 70%, white, transparent),
-        radial-gradient(2px 2px at 50% 15%, white, transparent),
-        radial-gradient(1px 1px at 60% 85%, white, transparent);
-    background-color: rgba(0, 0, 0, 0.4);
+        radial-gradient(2px 2px at 10% 20%, rgba(255, 255, 255, 0.6), transparent),
+        radial-gradient(2px 2px at 80% 30%, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(1px 1px at 30% 60%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1px 1px at 90% 70%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(2px 2px at 50% 15%, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(1px 1px at 60% 85%, rgba(255, 255, 255, 0.4), transparent);
+    background-color: transparent;
 }
