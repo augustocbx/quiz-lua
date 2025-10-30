@@ -23,7 +23,12 @@ class AvatarSystem {
             { id: 'space', emoji: '🌠', name: 'Estrela Cadente' }
         ];
 
-        this.selectedAvatar = this.loadSavedAvatar() || this.avatars[0];
+        this.selectedAvatar = this.loadSavedAvatar() || this.getRandomAvatar();
+    }
+
+    getRandomAvatar() {
+        const randomIndex = Math.floor(Math.random() * this.avatars.length);
+        return this.avatars[randomIndex];
     }
 
     loadSavedAvatar() {
