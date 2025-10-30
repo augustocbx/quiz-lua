@@ -135,3 +135,13 @@ const RANDOM_NAMES = [
     { name: "Protetor da Curiosidade", icon: "❓" },
     { name: "Sábio do Conhecimento", icon: "📚" }
 ];
+
+// Função para obter um nome aleatório
+function getRandomName() {
+    const randomIndex = Math.floor(Math.random() * RANDOM_NAMES.length);
+    const randomItem = RANDOM_NAMES[randomIndex];
+    return {
+        name: `${randomItem.icon} ${randomItem.name}`,
+        icon: randomItem.icon
+    };
+}
