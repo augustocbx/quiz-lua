@@ -1,0 +1,87 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo gradiente com as novas cores -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1110;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3E2723;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5D4037;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="calendarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="512" height="512" fill="url(#bgGrad)" rx="100"/>
+
+  <!-- Círculo decorativo de fundo -->
+  <circle cx="256" cy="256" r="220" fill="#8B4513" opacity="0.3"/>
+
+  <!-- Calendário principal -->
+  <rect x="120" y="140" width="272" height="280" rx="20" fill="url(#calendarGrad)" stroke="#8B4513" stroke-width="6"/>
+
+  <!-- Topo do calendário (argola) -->
+  <rect x="120" y="120" width="272" height="40" rx="10" fill="#8B4513"/>
+
+  <!-- Argolas de suspensão -->
+  <circle cx="180" cy="130" r="12" fill="none" stroke="#FFD700" stroke-width="6"/>
+  <circle cx="256" cy="130" r="12" fill="none" stroke="#FFD700" stroke-width="6"/>
+  <circle cx="332" cy="130" r="12" fill="none" stroke="#FFD700" stroke-width="6"/>
+
+  <!-- Grade de dias do calendário -->
+  <!-- Semana 1 -->
+  <rect x="140" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="180" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="220" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="260" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="300" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="340" y="200" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+
+  <!-- Semana 2 -->
+  <rect x="140" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="180" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="220" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="260" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="300" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="340" y="245" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+
+  <!-- Semana 3 -->
+  <rect x="140" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="180" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="220" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="260" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="300" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="340" y="290" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+
+  <!-- Semana 4 -->
+  <rect x="140" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="180" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="220" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="260" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="300" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+  <rect x="340" y="335" width="35" height="35" rx="5" fill="#8B4513" opacity="0.6"/>
+
+  <!-- Dia destacado (15) -->
+  <rect x="220" y="245" width="35" height="35" rx="5" fill="#FFD700"/>
+  <text x="237.5" y="270" text-anchor="middle" fill="#8B4513" font-size="20" font-weight="bold" font-family="Arial">15</text>
+
+  <!-- Sol (calendário solar) no canto superior direito -->
+  <circle cx="430" cy="90" r="40" fill="#FFD700" opacity="0.8"/>
+  <circle cx="430" cy="90" r="32" fill="#FFA500"/>
+  <!-- Raios do sol -->
+  <line x1="430" y1="40" x2="430" y2="25" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+  <line x1="460" y1="60" x2="472" y2="48" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+  <line x1="480" y1="90" x2="495" y2="90" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+  <line x1="460" y1="120" x2="472" y2="132" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Lua (calendário lunar) no canto inferior esquerdo -->
+  <circle cx="82" cy="430" r="40" fill="#E8E8E8" opacity="0.9"/>
+  <circle cx="95" cy="430" r="35" fill="#8B4513" opacity="0.3"/>
+
+  <!-- Estrelas decorativas (representando os 12 calendários) -->
+  <circle cx="100" cy="120" r="4" fill="#FFD700" opacity="0.7"/>
+  <circle cx="410" cy="180" r="4" fill="#FFD700" opacity="0.7"/>
+  <circle cx="90" cy="320" r="4" fill="#FFD700" opacity="0.7"/>
+  <circle cx="420" cy="390" r="4" fill="#FFD700" opacity="0.7"/>
+</svg>
