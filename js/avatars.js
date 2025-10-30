@@ -31,6 +31,11 @@ class AvatarSystem {
         return this.avatars[randomIndex];
     }
 
+    randomizeSelection() {
+        // Randomiza a seleção temporariamente sem salvar no localStorage
+        this.selectedAvatar = this.getRandomAvatar();
+    }
+
     loadSavedAvatar() {
         const saved = localStorage.getItem(STORAGE_PREFIX + 'selectedAvatar');
         if (saved) {
