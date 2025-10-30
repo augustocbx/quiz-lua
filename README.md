@@ -8,7 +8,7 @@ Um quiz educativo e interativo sobre a Lua - nosso satélite natural, voltado pa
 - 🌕 **12 Categorias**: Características Físicas, Fases da Lua, Formação, Missões Apollo, Eclipses, Influência na Terra, Superfície Lunar, Órbita e Movimento, Crateras e Mares, Exploração Moderna, Mitologia e Cultura, Astronomia Lunar
 - 🎨 **Animações temáticas** de comemoração e consolo
 - 🎯 **Sistema de pontuação** com critério de desempate por tempo
-- 🏆 **Rankings**: temporário (últimos 5 jogadores) e permanente (top 10)
+- 🏆 **Rankings**: temporário (últimos 5 jogadores) e permanente (top 30)
 - 💾 **Persistência de dados** via localStorage
 - 📱 **Design responsivo** para tablets e smartphones
 - 👨‍🚀 **Avatares espaciais** e nomes temáticos sobre a Lua
