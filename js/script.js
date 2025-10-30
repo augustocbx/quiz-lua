@@ -1,3 +1,6 @@
+// Prefixo único para localStorage (evita conflito com outros projetos)
+const STORAGE_PREFIX = 'quiz-lua_';
+
 // Estado do jogo
 let currentQuestionIndex = 0;
 let selectedQuestions = [];
@@ -600,42 +603,42 @@ function saveScore() {
 
 // Sistema de Rankings
 function loadRankings() {
-    const general = localStorage.getItem('generalRanking');
-    const temp = localStorage.getItem('tempRanking');
+    const general = localStorage.getItem(STORAGE_PREFIX + 'generalRanking');
+    const temp = localStorage.getItem(STORAGE_PREFIX + 'tempRanking');
 
     if (!general) {
-        localStorage.setItem('generalRanking', JSON.stringify([]));
+        localStorage.setItem(STORAGE_PREFIX + 'generalRanking', JSON.stringify([]));
     }
 
     if (!temp) {
-        localStorage.setItem('tempRanking', JSON.stringify([]));
+        localStorage.setItem(STORAGE_PREFIX + 'tempRanking', JSON.stringify([]));
     }
 }
 
 function saveToRankings(scoreData) {
     // Ranking Geral - mantém histórico completo ordenado (Top 30)
-    let generalRanking = JSON.parse(localStorage.getItem('generalRanking')) || [];
+    let generalRanking = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'generalRanking')) || [];
     generalRanking.push(scoreData);
     generalRanking.sort((a, b) => {
         if (b.score !== a.score) return b.score - a.score;
         return a.time - b.time;
     });
     generalRanking = generalRanking.slice(0, 30);
-    localStorage.setItem('generalRanking', JSON.stringify(generalRanking));
+    localStorage.setItem(STORAGE_PREFIX + 'generalRanking', JSON.stringify(generalRanking));
 
     // Ranking Temporário - estrutura separada, mantém todos os jogadores
-    let tempRanking = JSON.parse(localStorage.getItem('tempRanking')) || [];
+    let tempRanking = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'tempRanking')) || [];
     tempRanking.push(scoreData);
     tempRanking.sort((a, b) => {
         if (b.score !== a.score) return b.score - a.score;
         return a.time - b.time;
     });
-    localStorage.setItem('tempRanking', JSON.stringify(tempRanking));
+    localStorage.setItem(STORAGE_PREFIX + 'tempRanking', JSON.stringify(tempRanking));
 }
 
 // Atualizar ranking temporário na tela inicial
 function updateHomeTempRanking() {
-    const tempRanking = JSON.parse(localStorage.getItem('tempRanking')) || [];
+    const tempRanking = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'tempRanking')) || [];
 
     // Pegar os Top 3 do ranking temporário
     const top3 = tempRanking.slice(0, 3);
@@ -645,13 +648,13 @@ function updateHomeTempRanking() {
 
 // Exibir tela de ranking temporário
 function displayTempRanking() {
-    const tempRanking = JSON.parse(localStorage.getItem('tempRanking')) || [];
+    const tempRanking = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'tempRanking')) || [];
     displayRankingList('temp-ranking-list', tempRanking);
 }
 
 // Limpar ranking temporário
 function clearTempRanking() {
-    const tempRanking = JSON.parse(localStorage.getItem('tempRanking')) || [];
+    const tempRanking = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'tempRanking')) || [];
 
     if (tempRanking.length === 0) {
         alert('O ranking temporário já está vazio!');
@@ -661,7 +664,7 @@ function clearTempRanking() {
     const confirmation = confirm('Tem certeza que deseja limpar o ranking temporário? Esta ação não pode ser desfeita.');
 
     if (confirmation) {
-        localStorage.setItem('tempRanking', JSON.stringify([]));
+        localStorage.setItem(STORAGE_PREFIX + 'tempRanking', JSON.stringify([]));
 
         // Atualizar a exibição
         displayTempRanking();
@@ -676,7 +679,7 @@ function clearTempRanking() {
 
 // Exibir tela de ranking permanente
 function displayPermanentRanking() {
-    const permanentRanking = JSON.parse(localStorage.getItem('generalRanking')) || [];
+    const permanentRanking = JSON.parse(localStorage.getItem(STORAGE_PREFIX + 'generalRanking')) || [];
     displayRankingList('permanent-ranking-list', permanentRanking);
 }
 

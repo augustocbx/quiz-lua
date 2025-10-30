@@ -1,6 +1,9 @@
 // Sistema de Gerenciamento de Sons
 // Usa Web Audio API para sons sintetizados (não precisa de arquivos)
 
+// Prefixo único para localStorage (evita conflito com outros projetos)
+const STORAGE_PREFIX = 'quiz-lua_';
+
 class SoundManager {
     constructor() {
         this.audioContext = null;
@@ -11,7 +14,7 @@ class SoundManager {
         this.initAudioContext();
 
         // Carrega preferência salva
-        const savedPreference = localStorage.getItem('soundEnabled');
+        const savedPreference = localStorage.getItem(STORAGE_PREFIX + 'soundEnabled');
         if (savedPreference !== null) {
             this.enabled = savedPreference === 'true';
         }
@@ -29,7 +32,7 @@ class SoundManager {
     // Toggle sons on/off
     toggle() {
         this.enabled = !this.enabled;
-        localStorage.setItem('soundEnabled', this.enabled.toString());
+        localStorage.setItem(STORAGE_PREFIX + 'soundEnabled', this.enabled.toString());
         return this.enabled;
     }
 

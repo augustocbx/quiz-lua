@@ -1,5 +1,8 @@
 // Sistema de Avatares
 
+// Prefixo único para localStorage (evita conflito com outros projetos)
+const STORAGE_PREFIX = 'quiz-lua_';
+
 class AvatarSystem {
     constructor() {
         this.avatars = [
@@ -27,7 +30,7 @@ class AvatarSystem {
     }
 
     loadSavedAvatar() {
-        const saved = localStorage.getItem('selectedAvatar');
+        const saved = localStorage.getItem(STORAGE_PREFIX + 'selectedAvatar');
         if (saved) {
             const avatarId = saved;
             return this.avatars.find(a => a.id === avatarId) || null;
@@ -39,7 +42,7 @@ class AvatarSystem {
         const avatar = this.avatars.find(a => a.id === avatarId);
         if (avatar) {
             this.selectedAvatar = avatar;
-            localStorage.setItem('selectedAvatar', avatarId);
+            localStorage.setItem(STORAGE_PREFIX + 'selectedAvatar', avatarId);
             return true;
         }
         return false;

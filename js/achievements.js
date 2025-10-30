@@ -1,5 +1,8 @@
 // Sistema de Conquistas/Badges
 
+// Prefixo único para localStorage (evita conflito com outros projetos)
+const STORAGE_PREFIX = 'quiz-lua_';
+
 class AchievementSystem {
     constructor() {
         // Badges organizados por ordem crescente de dificuldade
@@ -163,7 +166,7 @@ class AchievementSystem {
     }
 
     loadProgress() {
-        const saved = localStorage.getItem('achievements');
+        const saved = localStorage.getItem(STORAGE_PREFIX + 'achievements');
         if (saved) {
             this.unlockedAchievements = JSON.parse(saved);
         } else {
@@ -171,14 +174,14 @@ class AchievementSystem {
         }
 
         // Carregar detalhes das conquistas (quem desbloqueou)
-        const savedDetails = localStorage.getItem('achievementDetails');
+        const savedDetails = localStorage.getItem(STORAGE_PREFIX + 'achievementDetails');
         if (savedDetails) {
             this.achievementDetails = JSON.parse(savedDetails);
         } else {
             this.achievementDetails = {};
         }
 
-        const savedStats = localStorage.getItem('achievementStats');
+        const savedStats = localStorage.getItem(STORAGE_PREFIX + 'achievementStats');
         if (savedStats) {
             this.stats = JSON.parse(savedStats);
         } else {
@@ -196,9 +199,9 @@ class AchievementSystem {
     }
 
     saveProgress() {
-        localStorage.setItem('achievements', JSON.stringify(this.unlockedAchievements));
-        localStorage.setItem('achievementDetails', JSON.stringify(this.achievementDetails));
-        localStorage.setItem('achievementStats', JSON.stringify(this.stats));
+        localStorage.setItem(STORAGE_PREFIX + 'achievements', JSON.stringify(this.unlockedAchievements));
+        localStorage.setItem(STORAGE_PREFIX + 'achievementDetails', JSON.stringify(this.achievementDetails));
+        localStorage.setItem(STORAGE_PREFIX + 'achievementStats', JSON.stringify(this.stats));
     }
 
     isUnlocked(achievementId) {
