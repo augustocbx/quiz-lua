@@ -1,8 +1,5 @@
 // Sistema de Avatares
 
-// Prefixo único para localStorage (evita conflito com outros projetos)
-const STORAGE_PREFIX = 'quiz-lua_';
-
 class AvatarSystem {
     constructor() {
         this.avatars = [

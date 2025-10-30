@@ -1,9 +1,6 @@
 // Sistema de Gerenciamento de Sons
 // Usa Web Audio API para sons sintetizados (não precisa de arquivos)
 
-// Prefixo único para localStorage (evita conflito com outros projetos)
-const STORAGE_PREFIX = 'quiz-lua_';
-
 class SoundManager {
     constructor() {
         this.audioContext = null;

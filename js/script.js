@@ -1,6 +1,3 @@
-// Prefixo único para localStorage (evita conflito com outros projetos)
-const STORAGE_PREFIX = 'quiz-lua_';
-
 // Estado do jogo
 let currentQuestionIndex = 0;
 let selectedQuestions = [];

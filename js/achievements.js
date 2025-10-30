@@ -1,8 +1,5 @@
 // Sistema de Conquistas/Badges
 
-// Prefixo único para localStorage (evita conflito com outros projetos)
-const STORAGE_PREFIX = 'quiz-lua_';
-
 class AchievementSystem {
     constructor() {
         // Badges organizados por ordem crescente de dificuldade
